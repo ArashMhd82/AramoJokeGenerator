@@ -24,9 +24,57 @@ body{
     color: seashell;
 }
 
-.container span{
+.container #smilyFaceEmojy{
     font-size: 60px;
     text-align: center;
+}
+
+.container #settingIcon{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: 2px orange solid;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.container #settingIcon:hover{
+    color: black;
+    background-color:orange;
+}
+
+.container #settingContainer{
+    display: none;
+    background-color: rgba(236, 158, 12, 0.964);
+    box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4);
+    color: black;
+    font-weight: 600;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    border-radius: 10px;
+}
+
+.settingContainerActive{
+    display: block !important;
+}
+
+
+.container #settingContainer ul{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.container #settingContainer ul li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .container p{

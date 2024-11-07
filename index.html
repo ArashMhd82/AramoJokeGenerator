@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favIcon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=tune" />
     <script defer src="assets/scripts/main.js"></script>
     <title>Random Joke Generator</title>
 </head>
 <body>
     <div class="container">
-        <span>
+        <span id="settingIcon" onclick="document.getElementById('settingContainer').classList.toggle('settingContainerActive')" class="material-symbols-outlined">
+            tune
+        </span>
+        <div id="settingContainer">
+            <ul>
+                <li>
+                    <input type="checkbox" id="ProgrammingOption" value="Programming" checked>
+                    <label for="ProgrammingOption">Programming</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="MiscOption" value="Miscellaneous" checked>
+                    <label for="MiscOption">Misc</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="DarkOption" value="Dark" checked>
+                    <label for="DarkOption">Dark</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="PunOption" value="Pun" checked>
+                    <label for="PunOption">Pun</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="SpookyOption" value="Spooky" checked>
+                    <label for="SpookyOption">Spooky</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="ChristmasOpiton" value="Christmas" checked>
+                    <label for="ChristmasOpiton">Christmas</label>
+                </li>
+            </ul>
+        </div>
+        <span id="smilyFaceEmojy">
             &#128514
         </span>
         <p id="Joke">

@@ -1,6 +1,6 @@
 const jokeContainer = document.getElementById('Joke')
 const JokeGeneratorBtn = document.getElementById('generateJokeBtn')
-const JokeAPIUrl = 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Dark,Pun,Spooky,Christmas?type=single'
+let JokeAPIUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Dark,Pun,Spooky,Christmas?type=single`
 
 let getJoke = () => {
     fetch(JokeAPIUrl)
@@ -13,4 +13,13 @@ let getJoke = () => {
 getJoke()
 
 
-JokeGeneratorBtn.addEventListener('click',getJoke)
+JokeGeneratorBtn.addEventListener('click', function() {
+    
+    const checkboxes = document.querySelectorAll('#settingContainer input[type="checkbox"]');
+    const checkedValues = Array.from(checkboxes)
+    .filter(checkbox => checkbox.checked)
+    .map(checkbox => checkbox.value);
+    JokeAPIUrl = `https://v2.jokeapi.dev/joke/${checkedValues}?type=single`
+    
+    getJoke()
+})
