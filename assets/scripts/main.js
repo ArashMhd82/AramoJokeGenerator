@@ -1,6 +1,6 @@
 const jokeContainer = document.getElementById('Joke')
 const JokeGeneratorBtn = document.getElementById('generateJokeBtn')
-let JokeAPIUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Dark,Pun,Spooky,Christmas?type=single`
+let JokeAPIUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Pun,Spooky,Christmas?type=single`
 
 let getJoke = () => {
     fetch(JokeAPIUrl)
